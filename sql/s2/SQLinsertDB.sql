@@ -1,16 +1,31 @@
 -- Detta dokument är fyllt med viss slumpmässig data för det triviala
 -- delarna av skolans databassystem för att möjliggöra vissa tester
 
--- student
+--- student
 -- parent
 -- instructor
 -- group_lesson
 -- rent_instrument
+-- email
+-- monthly_salary
+-- phone
+-- student_email
+-- student_phone
+-- application
+-- ensemble
+-- individual_lesson
+-- school
+-- siblings
+-- booking
+-- discount
+-- monthly_fee
+-- number_of_lessons
+-- schedule
 
-INSERT INTO student (frist_name,last_name,home_address,person_number,age,sibling_id,phone_number,email_address,student_id) VALUES
-('Thomas', 'Gustafsson','Fjalkinge Nastvattnet 74','200210074567','20','0','044-9659966','icie22@hotmail.com','0'),
-('Adam', 'Lilienberg','Viken Lantmannagatan 77','199309276134','29','1','042-6827673','brian.andersson@gmail.com','1'),
-('Viktor', 'Björken','Ostersund Stallstigen 41','200001024961','22','2','063-6897354','guido_andersson@hotmail.com','2');
+INSERT INTO student (frist_name,last_name,home_address,person_number,age,sibling_id,student_id) VALUES
+('Thomas', 'Gustafsson','Fjalkinge Nastvattnet 74','200210074567','20','0','0'),
+('Adam', 'Lilienberg','Viken Lantmannagatan 77','199309276134','29','1','1'),
+('Viktor', 'Björken','Ostersund Stallstigen 41','200001024961','22','2','2');
 
 
 INSERT INTO parent (fisrt_name,last_name,age,home_address,person_number,student_id) VALUES
@@ -34,3 +49,28 @@ INSERT INTO rent_instrument (price_monthly,time_leased,quantity_of_instrument,br
 ('200', '6 months','1','Gibson','Guitar','0'),
 ('400', '8 months','2','Yamaha','Guitar,Piano','1'),
 ('600', '5 months','3','Yamaha','Trumpet,Drums,Guitar','2');
+
+INSERT INTO email (email_id,email_address) VALUES
+('0','johnwick@gmail.com'),
+('1','shrekgreenmachine@live.se'),
+('2', 'milesdavis112@icloud.com');
+
+INSERT INTO monthly_salary (instructor_id,date_of_payment,amount_to_pay) VALUES
+('0','2022.12.25 00:00:00','37000'),
+('1','2022.12.25 00:00:00', '32000'),
+('2','2022.12.25 00:00:00', '35000');
+
+INSERT INTO phone (phone_id,phone_number) VALUES
+('0','0704355324'),
+('1','0708549322'),
+('2','0709679933');
+
+INSERT INTO application (student_id,genre_of_music,skill_level) VALUES
+('0','jazz', 'beginner'),
+('1', 'blues', 'intermediate'),
+('2', 'classic', 'advnaced');
+
+INSERT INTO ensemble (ensemble_id,scheduled_time_slot,target_genre,min_student_req,max_student_req,instructor_id,school_id) VALUES
+('0','2022.12.12 11:00:00', 'jazz', '2','5','2','0'),
+('1','2022.12.13 11:00:00', 'blues', '2','5','0','0'),
+('2','2022.12.12 11:00:00', 'classic','2' ,'5','1','0');
