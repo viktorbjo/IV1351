@@ -16,5 +16,3 @@ FROM (
  ) AS lessons
 WHERE EXTRACT (YEAR FROM scheduled_time_slot) = 2022
 GROUP BY month;
-
-
