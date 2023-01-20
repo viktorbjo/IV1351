@@ -9,12 +9,10 @@ GROUP BY student_id;
 
 -- ////////////////////////
 
-SELECT siblings AS nr_of_siblings, COUNT(*) AS nr_of_students
-FROM (SELECT student.id, COUNT(siblings.student_id) AS siblings
+SELECT COALESCE(sibs.siblings, 0) AS nr_of_siblings, COUNT(student.id) AS nr_of_students
 FROM student
-LEFT JOIN siblings ON student.id = siblings.student_id
-GROUP BY student.id
-ORDER BY student.id) AS sibling_counts
-GROUP BY siblings
+LEFT JOIN (SELECT student_id, COUNT(student_id) AS siblings
+           FROM siblings
+           GROUP BY student_id) AS sibs ON student.id = sibs.student_id
+GROUP BY nr_of_siblings
 ORDER BY nr_of_siblings;
-
