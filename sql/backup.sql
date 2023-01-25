@@ -1,3 +1,4 @@
+--test backup
 CREATE TABLE email (
  id INT NOT NULL,
  email_address UNIQUE VARCHAR(500) NOT NULL
