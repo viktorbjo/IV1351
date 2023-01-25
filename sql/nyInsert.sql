@@ -1,5 +1,5 @@
 
---nu gammal  
+--nu gammal.  
 INSERT INTO instructor (id, first_name, last_name, age, home_address, salary_per_hour, person_number, instrument_type) VALUES
   (1, 'John', 'Doe', 40, '1 Main St', 50.00, '123-456-7890', 'Guitar'),
   (2, 'Jane', 'Doe', 35, '2 Main St', 45.00, '123-456-7891', 'Piano'),
