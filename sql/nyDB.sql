@@ -1,3 +1,4 @@
+--nu gammal
 CREATE TABLE email (
  id INT NOT NULL,
  email_address VARCHAR(500) NOT NULL UNIQUE
